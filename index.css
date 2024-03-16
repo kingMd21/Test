@@ -8,17 +8,22 @@ body {
     justify-content: space-between;
     align-items: center;
     color: white;
-    padding: 20px;
+    padding: 10px;
+    background-color: rgb(87, 153, 195);
+    border-radius: 10px;
+}
+
+.navbar-title {
+    font-size: 24px;
+    margin-right: auto;
+    color: white;
+    display: inline-block; /* Add this line */
 }
 
 .logo {
-    height: 50px;
+    height: 65px;
 }
 
-.line {
-    width: 100%;
-    border-top: 3px solid navy;
-}
 
 .links {
     display: flex;
@@ -33,6 +38,7 @@ body {
     color: white;
     text-decoration: none;
     font-size: 20px;
+    transition: all 0.3s ease; /* Add this line */
 }
 
 .links a:visited {
@@ -40,11 +46,38 @@ body {
     font-size: 22px;
 }
 
+.links a:hover {
+    transform: scale(1.2); /* Add this line */
+    font-weight: bold; /* Add this line */
+}
+
 .name {
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'Calibri';
     font-size: 72px;
     margin: 20px 0;
     color: white;
+}
+
+.name a {
+    color: white; /* Make the Aditya link white */
+    transition: all .3s ease;
+}
+
+.name a:hover{
+    transform: scale(1.2);
+    font-weight: b;
+}
+
+.name-link {
+    text-decoration: none;
+}
+
+.description{
+    font-family: 'Calibri';
+    font-size: 25px;
+    margin: auto;
+    color: #ffffff;
+    font-style: italic;
 }
 
 .gallery {
@@ -58,4 +91,29 @@ body {
     background-color: black;
     margin: 0 1%;
     border: 3px solid black;
+}
+
+/* For devices smaller than 600px */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .links {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .links a {
+        margin: 10px 0;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    .image {
+        width: 90%;
+        margin: 5% auto;
+    }
 }
