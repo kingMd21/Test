@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    background-color: #ff5a5f;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-img {
+    width: 50px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.burger-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: black;
+    transform: scale(1.1);
+}
+
+.nav-links a.active {
+    font-weight: bold;
+}
+
+main {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.intro, .benefits, .how-it-works, .testimonials {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.intro h1, .benefits h2, .how-it-works h2, .testimonials h2 {
+    border-bottom: 2px solid #ff5a5f;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.benefit, .testimonial {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.benefit img, .testimonial img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.benefit p, .testimonial p {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #ff5a5f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    display: none; /* Initially hidden */
+}
+
+#footer-spacer {
+    height: 50px; /* Adjust based on your needs */
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: #ff5a5f;
+    margin: 40px 0;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #ff5a5f;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+
+    .benefit, .testimonial {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .benefit img, .testimonial img {
+        margin: 0 auto 20px;
+    }
+}
